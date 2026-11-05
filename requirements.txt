@@ -1,0 +1,3 @@
+# Generic environment. For an exact CUDA 12.8 or CPU build, use the platform file instead.
+numpy==2.4.6
+torch==2.11.0

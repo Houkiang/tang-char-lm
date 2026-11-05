@@ -1,0 +1,93 @@
+{
+  "format_version": 1,
+  "models": {
+    "bigram": {
+      "selected_alpha": 0.1,
+      "test": {
+        "cross_entropy": 7.079912390635424,
+        "nll": 10393.311389452801,
+        "perplexity": 1187.864445900984,
+        "tokens": 1468
+      },
+      "validation_grid": {
+        "0.001": {
+          "cross_entropy": 7.844828453084858,
+          "nll": 13312.673884885004,
+          "perplexity": 2552.499752525023,
+          "tokens": 1697
+        },
+        "0.01": {
+          "cross_entropy": 7.117561289668262,
+          "nll": 12078.50150856704,
+          "perplexity": 1233.438762807645,
+          "tokens": 1697
+        },
+        "0.1": {
+          "cross_entropy": 7.062107087681033,
+          "nll": 11984.395727794714,
+          "perplexity": 1166.9013406159731,
+          "tokens": 1697
+        },
+        "0.5": {
+          "cross_entropy": 7.236805894702875,
+          "nll": 12280.859603310779,
+          "perplexity": 1389.6481918523377,
+          "tokens": 1697
+        },
+        "1.0": {
+          "cross_entropy": 7.3296375709081545,
+          "nll": 12438.394957831139,
+          "perplexity": 1524.8290294312594,
+          "tokens": 1697
+        }
+      }
+    },
+    "unigram": {
+      "selected_alpha": 1.0,
+      "test": {
+        "cross_entropy": 6.64253677692062,
+        "nll": 9751.24398851947,
+        "perplexity": 767.0383322072587,
+        "tokens": 1468
+      },
+      "validation_grid": {
+        "0.001": {
+          "cross_entropy": 7.028353523953436,
+          "nll": 11927.11593014898,
+          "perplexity": 1128.1715727051255,
+          "tokens": 1697
+        },
+        "0.01": {
+          "cross_entropy": 6.8819590938989466,
+          "nll": 11678.684582346512,
+          "perplexity": 974.5336938725508,
+          "tokens": 1697
+        },
+        "0.1": {
+          "cross_entropy": 6.73710665721778,
+          "nll": 11432.869997298572,
+          "perplexity": 843.1177746653467,
+          "tokens": 1697
+        },
+        "0.5": {
+          "cross_entropy": 6.645787648831367,
+          "nll": 11277.90164006683,
+          "perplexity": 769.5359330665477,
+          "tokens": 1697
+        },
+        "1.0": {
+          "cross_entropy": 6.62007635455115,
+          "nll": 11234.269573673302,
+          "perplexity": 750.0023610193119,
+          "tokens": 1697
+        }
+      }
+    }
+  },
+  "selection": "minimum validation cross-entropy; test evaluated after alpha selection",
+  "source_sha256": "2798806f731be51e94323ba05326e4f59caecb8cb19a4403706f4b22d2c549db",
+  "splits_sha256": "fe21435dac6d84e59c69eb30f36afbf324d5dba1307db683896644c3ad6b7d76",
+  "target_support": 2313,
+  "test_oov_rate": 0.09166092350103378,
+  "vocab_sha256": "e0ea6b0dce357b1b7b22bca82d3261e6ab9028d19cc272fde44510177d732883"
+}

@@ -1,0 +1,57 @@
+{
+  "protocol_version": "1.0",
+  "frozen_date": "2026-11-05",
+  "scope": "primary multi-seed LSTM versus GRU comparison",
+  "data": {
+    "source_sha256": "2798806f731be51e94323ba05326e4f59caecb8cb19a4403706f4b22d2c549db",
+    "splits_sha256": "fe21435dac6d84e59c69eb30f36afbf324d5dba1307db683896644c3ad6b7d76",
+    "vocab_sha256": "e0ea6b0dce357b1b7b22bca82d3261e6ab9028d19cc272fde44510177d732883",
+    "split_seed": 42,
+    "split_ratio": "80/10/10 by whole poem",
+    "train_poems": 131,
+    "validation_poems": 16,
+    "test_poems": 17,
+    "vocab_size": 2315,
+    "test_target_tokens": 1468,
+    "test_oov_rate": 0.09166092350103378
+  },
+  "random_seeds": [42, 43, 44],
+  "models": ["lstm", "gru"],
+  "model_config": {
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "dropout": 0.2,
+    "bidirectional": false
+  },
+  "training": {
+    "batch_size": 16,
+    "epochs_max": 50,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "early_stopping_metric": "validation cross-entropy",
+    "early_stopping_patience": 8,
+    "checkpoint_selection": "minimum validation cross-entropy"
+  },
+  "evaluation": {
+    "primary_metric": "test character-level perplexity",
+    "secondary_metric": "test cross-entropy in nats per target token",
+    "aggregation": "arithmetic mean and sample standard deviation across three seeds",
+    "token_policy": "include characters and eos; exclude bos and pad",
+    "test_policy": "evaluate each seed only after validation-based checkpoint selection; do not tune from test"
+  },
+  "reporting": {
+    "parameter_counts_reported": true,
+    "same_dimensions_not_parameter_matched": true,
+    "generation_checkpoint": "seed 42 fixed examples, not selected by generation quality",
+    "required_limitations": [
+      "small corpus",
+      "test OOV rate",
+      "different LSTM and GRU parameter counts",
+      "surface-form constraints do not guarantee poetic quality"
+    ]
+  },
+  "audit_note": "Seed 42 test results were produced before this multi-seed protocol was frozen. Seeds 43 and 44 and all aggregation rules were frozen before those runs; no hyperparameters are changed from seed 42."
+}

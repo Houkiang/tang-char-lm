@@ -1,0 +1,54 @@
+% Compile with: xelatex -output-directory=report report/main.tex
+\documentclass[UTF8,a4paper,11pt]{ctexart}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\geometry{margin=2.5cm}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black}
+
+\title{基于 LSTM 与 GRU 的唐诗字符级语言建模与生成研究}
+\author{Houkiang}
+\date{日期待填}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent\textbf{Abstract.}
+研究问题、方法、数据规模、测试集困惑度和主要发现待实验完成后填写。
+\end{abstract}
+
+\noindent\textbf{Keywords:} 字符级语言模型；LSTM；GRU；困惑度；文本生成
+
+\section{Introduction}
+说明字符级唐诗建模的研究问题、比较目标与本文贡献。数据与任务背景见\cite{tangdata}。
+
+\section{Related Work}
+讨论循环神经网络、LSTM、GRU 和序列生成评价的相关工作；教材依据见\cite{nndl2020}。补充原始论文引用与准确定位。
+
+\section{Method}
+定义字符词表、序列边界、模型结构、优化目标与采样策略。主要评价量为字符级困惑度：
+\begin{equation}
+  \mathrm{PPL}=\exp\!\left(\frac{1}{N}\sum_{i=1}^{N}-\log p_{\theta}(y_i\mid y_{<i})\right).
+\end{equation}
+其中 $N$ 只计被预测字符与诗篇结束标记，不计起始标记和填充位。
+
+\section{Experiment}
+记录语料 SHA-256、获取日期、划分篇数、词表与 OOV、超参数、训练预算、硬件、软件版本、随机种子及基线。主实验应保持 LSTM 与 GRU 的数据协议一致。
+
+\section{Result}
+实验完成后插入测试集交叉熵与困惑度表、训练曲线、多个固定种子的生成样本、约束解码对照和必要消融。每个图表附对应 run ID；不展示未验证数值。
+
+\section{Conclusion}
+根据真实结果总结模型比较、生成特征、数据与评估局限，以及可复现的后续工作。
+
+\begin{thebibliography}{9}
+\bibitem{nndl2020}
+邱锡鹏. \textit{神经网络与深度学习}. 机械工业出版社, 2020. ISBN 978-7-111-64968-7.
+\bibitem{tangdata}
+nndl. \textit{poetryFromTang.txt}. \url{https://github.com/nndl/llm-beginner/blob/master/poetryFromTang.txt}. 访问日期待填.
+\end{thebibliography}
+
+\end{document}

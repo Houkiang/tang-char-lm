@@ -1,0 +1,219 @@
+{
+  "format_version": 1,
+  "models": {
+    "gru": {
+      "best_epoch": {
+        "maximum": 15.0,
+        "mean": 14.333333333333334,
+        "minimum": 14.0,
+        "sample_standard_deviation": 0.5773502691896257,
+        "values": [
+          14.0,
+          15.0,
+          14.0
+        ]
+      },
+      "parameters": [
+        1582475
+      ],
+      "runs": [
+        {
+          "best_epoch": 14,
+          "checkpoint_sha256": "98f8fa9f4d36bd668521d9fee0a42b6959ae891af6d87fa405b6f40fda1465e9",
+          "parameters": 1582475,
+          "run_dir": "gru-seed42",
+          "seed": 42,
+          "test_cross_entropy": 6.674604743313075,
+          "test_perplexity": 792.0343351311642,
+          "training_seconds": 8.398172199958935
+        },
+        {
+          "best_epoch": 15,
+          "checkpoint_sha256": "df839e61d2aa3e171b4688bf203b9c82493eee9b384fc7d8afa91795d7c6b907",
+          "parameters": 1582475,
+          "run_dir": "gru-seed43",
+          "seed": 43,
+          "test_cross_entropy": 6.655365904930177,
+          "test_perplexity": 776.9421580481467,
+          "training_seconds": 8.874530599918216
+        },
+        {
+          "best_epoch": 14,
+          "checkpoint_sha256": "5e56af35230337e7f916362fef6e9bd7e73a551a388c63187bf9bc8f0783343d",
+          "parameters": 1582475,
+          "run_dir": "gru-seed44",
+          "seed": 44,
+          "test_cross_entropy": 6.59593533300249,
+          "test_perplexity": 732.113336311226,
+          "training_seconds": 8.466397800017148
+        }
+      ],
+      "test_cross_entropy": {
+        "maximum": 6.674604743313075,
+        "mean": 6.641968660415247,
+        "minimum": 6.59593533300249,
+        "sample_standard_deviation": 0.04101016520447549,
+        "values": [
+          6.674604743313075,
+          6.655365904930177,
+          6.59593533300249
+        ]
+      },
+      "test_perplexity": {
+        "maximum": 792.0343351311642,
+        "mean": 767.0299431635123,
+        "minimum": 732.113336311226,
+        "sample_standard_deviation": 31.16601559125153,
+        "values": [
+          792.0343351311642,
+          776.9421580481467,
+          732.113336311226
+        ]
+      },
+      "training_seconds": {
+        "maximum": 8.874530599918216,
+        "mean": 8.579700199964767,
+        "minimum": 8.398172199958935,
+        "sample_standard_deviation": 0.2575993142039768,
+        "values": [
+          8.398172199958935,
+          8.874530599918216,
+          8.466397800017148
+        ]
+      }
+    },
+    "lstm": {
+      "best_epoch": {
+        "maximum": 25.0,
+        "mean": 20.666666666666668,
+        "minimum": 17.0,
+        "sample_standard_deviation": 4.041451884327381,
+        "values": [
+          20.0,
+          17.0,
+          25.0
+        ]
+      },
+      "parameters": [
+        1812875
+      ],
+      "runs": [
+        {
+          "best_epoch": 20,
+          "checkpoint_sha256": "bc0314cfd0e97204b56724850b3199768eb0bce1a257f678e3e6db9a05f0a81c",
+          "parameters": 1812875,
+          "run_dir": "lstm-seed42",
+          "seed": 42,
+          "test_cross_entropy": 6.517668887769819,
+          "test_perplexity": 676.998385260483,
+          "training_seconds": 10.984494999982417
+        },
+        {
+          "best_epoch": 17,
+          "checkpoint_sha256": "27ce29873b29f782f25c48dbaf8cea9562c0739f934a2832bea1e758a5de4335",
+          "parameters": 1812875,
+          "run_dir": "lstm-seed43",
+          "seed": 43,
+          "test_cross_entropy": 6.638198436768243,
+          "test_perplexity": 763.7178668741967,
+          "training_seconds": 9.413702700054273
+        },
+        {
+          "best_epoch": 25,
+          "checkpoint_sha256": "e6f425f616e46654c3ef5e5e13b41f3ab9702dc86b654cba4f3c03835a0dbc1b",
+          "parameters": 1812875,
+          "run_dir": "lstm-seed44",
+          "seed": 44,
+          "test_cross_entropy": 6.599115065073122,
+          "test_perplexity": 734.4449655796805,
+          "training_seconds": 11.975732300197706
+        }
+      ],
+      "test_cross_entropy": {
+        "maximum": 6.638198436768243,
+        "mean": 6.5849941298703945,
+        "minimum": 6.517668887769819,
+        "sample_standard_deviation": 0.06149303744075903,
+        "values": [
+          6.517668887769819,
+          6.638198436768243,
+          6.599115065073122
+        ]
+      },
+      "test_perplexity": {
+        "maximum": 763.7178668741967,
+        "mean": 725.0537392381201,
+        "minimum": 676.998385260483,
+        "sample_standard_deviation": 44.115909511043974,
+        "values": [
+          676.998385260483,
+          763.7178668741967,
+          734.4449655796805
+        ]
+      },
+      "training_seconds": {
+        "maximum": 11.975732300197706,
+        "mean": 10.791310000078132,
+        "minimum": 9.413702700054273,
+        "sample_standard_deviation": 1.2918936686677402,
+        "values": [
+          10.984494999982417,
+          9.413702700054273,
+          11.975732300197706
+        ]
+      }
+    }
+  },
+  "paired_comparison": [
+    {
+      "gru_perplexity": 792.0343351311642,
+      "lstm_minus_gru": -115.03594987068118,
+      "lstm_perplexity": 676.998385260483,
+      "lstm_relative_reduction_from_gru": 0.14524111489640248,
+      "seed": 42
+    },
+    {
+      "gru_perplexity": 776.9421580481467,
+      "lstm_minus_gru": -13.22429117394995,
+      "lstm_perplexity": 763.7178668741967,
+      "lstm_relative_reduction_from_gru": 0.017020946845222484,
+      "seed": 43
+    },
+    {
+      "gru_perplexity": 732.113336311226,
+      "lstm_minus_gru": 2.331629268454435,
+      "lstm_perplexity": 734.4449655796805,
+      "lstm_relative_reduction_from_gru": -0.0031847927811319704,
+      "seed": 44
+    }
+  ],
+  "paired_lstm_minus_gru": {
+    "maximum": 2.331629268454435,
+    "mean": -41.976203925392234,
+    "minimum": -115.03594987068118,
+    "sample_standard_deviation": 63.747874657867825,
+    "values": [
+      -115.03594987068118,
+      -13.22429117394995,
+      2.331629268454435
+    ]
+  },
+  "paired_lstm_relative_reduction_from_gru": {
+    "maximum": 0.14524111489640248,
+    "mean": 0.05302575632016433,
+    "minimum": -0.0031847927811319704,
+    "sample_standard_deviation": 0.08049734310193189,
+    "values": [
+      0.14524111489640248,
+      0.017020946845222484,
+      -0.0031847927811319704
+    ]
+  },
+  "protocol_path": "configs\\experiment_protocol_v1.json",
+  "protocol_sha256": "97393f2feb820228d79628c0262d6a79e521e3b9a2ab2b85ad44c1c6b75d4246",
+  "seeds": [
+    42,
+    43,
+    44
+  ]
+}

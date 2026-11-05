@@ -1,0 +1,21 @@
+{
+  "batch_size": 16,
+  "device": "cuda",
+  "epochs": 50,
+  "gradient_clip": 1.0,
+  "learning_rate": 0.001,
+  "model": {
+    "dropout": 0.2,
+    "embedding_dim": 128,
+    "hidden_dim": 256,
+    "num_layers": 2,
+    "rnn_type": "lstm",
+    "vocab_size": 2315
+  },
+  "patience": 8,
+  "prepared_dir": "data\\processed\\poetryFromTang-seed42",
+  "run_dir": "runs\\lstm-seed44",
+  "seed": 44,
+  "source_path": "data\\raw\\poetryFromTang.txt",
+  "weight_decay": 0.0001
+}

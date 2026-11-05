@@ -1,0 +1,19 @@
+{
+  "best_epoch": 14,
+  "checkpoint": "best.pt",
+  "checkpoint_sha256": "98f8fa9f4d36bd668521d9fee0a42b6959ae891af6d87fa405b6f40fda1465e9",
+  "evaluation_device": "cpu",
+  "format_version": 1,
+  "metrics": {
+    "cross_entropy": 6.674604743313075,
+    "nll": 9798.319763183594,
+    "perplexity": 792.0343351311642,
+    "tokens": 1468
+  },
+  "model": "gru",
+  "oov_rate": 0.09166092350103378,
+  "seed": 42,
+  "source_sha256": "2798806f731be51e94323ba05326e4f59caecb8cb19a4403706f4b22d2c549db",
+  "splits_sha256": "fe21435dac6d84e59c69eb30f36afbf324d5dba1307db683896644c3ad6b7d76",
+  "vocab_sha256": "e0ea6b0dce357b1b7b22bca82d3261e6ab9028d19cc272fde44510177d732883"
+}

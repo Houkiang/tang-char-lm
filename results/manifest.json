@@ -1,0 +1,29 @@
+{
+  "author": "Houkiang",
+  "description": "Lightweight public experiment snapshots; model checkpoints are excluded.",
+  "files": [
+    "baselines-seed42.json",
+    "gru-seed42/config.json",
+    "gru-seed42/generation.json",
+    "gru-seed42/metrics.json",
+    "gru-seed42/test_metrics.json",
+    "gru-seed43/config.json",
+    "gru-seed43/metrics.json",
+    "gru-seed43/test_metrics.json",
+    "gru-seed44/config.json",
+    "gru-seed44/metrics.json",
+    "gru-seed44/test_metrics.json",
+    "lstm-seed42/config.json",
+    "lstm-seed42/generation.json",
+    "lstm-seed42/metrics.json",
+    "lstm-seed42/test_metrics.json",
+    "lstm-seed43/config.json",
+    "lstm-seed43/metrics.json",
+    "lstm-seed43/test_metrics.json",
+    "lstm-seed44/config.json",
+    "lstm-seed44/metrics.json",
+    "lstm-seed44/test_metrics.json",
+    "multiseed_summary.json"
+  ],
+  "format_version": 1
+}
